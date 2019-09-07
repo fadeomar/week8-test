@@ -1,4 +1,4 @@
-const dbConnection = require('../config/connection');
+const connection = require('../config/connection');
 
 const addCity = userData => {
   const { name, country } = userData;
@@ -6,7 +6,7 @@ const addCity = userData => {
     text: 'INSERT INTO city (name, country) VALUES ($1, $2);',
     values: [name, country],
   };
-  return dbConnection.query(sql);
+  return connection.query(sql);
 };
 
 module.exports = {
