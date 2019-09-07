@@ -7,7 +7,11 @@ CREATE TABLE city (
   name VARCHAR(100) NOT NULL,
   country TEXT NOT NULL
 );
-
+CREATE TABLE user (
+  id SERIAL PRIMARY KEY NOT NULL,
+  email VARCHAR UNIQUE NOT NULL,
+  user_password VARCHAR
+);
 INSERT INTO city (name, country) VALUES
   ('Gaza', 'Palestine'),
   ('London', 'UK'),
